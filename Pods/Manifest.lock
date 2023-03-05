@@ -1,0 +1,16 @@
+PODS:
+  - Instabug (11.6.0)
+
+DEPENDENCIES:
+  - Instabug
+
+SPEC REPOS:
+  trunk:
+    - Instabug
+
+SPEC CHECKSUMS:
+  Instabug: bddae5b34c359e97e4aee5ce4d9a71fdba4df652
+
+PODFILE CHECKSUM: 05ca32290bf9fa44d2097bfdcdee102817cfe478
+
+COCOAPODS: 1.11.3

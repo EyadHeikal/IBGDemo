@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1420"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8640A66E29B4C99300A660C5"
+               BuildableName = "SPMDemo.app"
+               BlueprintName = "SPMDemo"
+               ReferencedContainer = "container:SPMDemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8640A68429B4C99400A660C5"
+               BuildableName = "SPMDemoTests.xctest"
+               BlueprintName = "SPMDemoTests"
+               ReferencedContainer = "container:SPMDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8640A68E29B4C99400A660C5"
+               BuildableName = "SPMDemoUITests.xctest"
+               BlueprintName = "SPMDemoUITests"
+               ReferencedContainer = "container:SPMDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8640A66E29B4C99300A660C5"
+            BuildableName = "SPMDemo.app"
+            BlueprintName = "SPMDemo"
+            ReferencedContainer = "container:SPMDemo.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8640A66E29B4C99300A660C5"
+            BuildableName = "SPMDemo.app"
+            BlueprintName = "SPMDemo"
+            ReferencedContainer = "container:SPMDemo.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;#- -- SCRIPT BEGIN - --&#10;# SKIP_SIMULATOR_BUILDS=1&#10;  SCRIPT_SRC=$(find &quot;$BUILT_PRODUCTS_DIR&quot; -name &apos;Instabug_dsym_upload.sh&apos; | head -1)&#10;  if [ ! &quot;${SCRIPT_SRC}&quot; ]; then&#10;    echo &quot;Instabug: err: script not found. Make sure that you&apos;re including InstabugResources.bundle in your project directory&quot;&#10;    exit 1&#10;  fi&#10;  # APP_TOKEN=&quot;YOUR-APP-TOKEN-HERE&quot;&#10;  source &quot;${SCRIPT_SRC}&quot;&#10;#- -- SCRIPT END - --&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+   </ArchiveAction>
+</Scheme>
