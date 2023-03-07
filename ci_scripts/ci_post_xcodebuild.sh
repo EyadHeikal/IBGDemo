@@ -13,7 +13,7 @@ echo "Before Find"
 echo "PWD:- ${PWD}"
 
 find "$DWARF_DSYM_FOLDER_PATH"  -type f -name "${CI_PRODUCT}*.dSYM"
-DWARF_DSYM_FILE_NAME=$(find "${DWARF_DSYM_FOLDER_PATH}"  -type f -name "${CI_PRODUCT}*.dSYM" | head -1)
+DWARF_DSYM_FILE_NAME=$(find .  -type f -name "${CI_PRODUCT}*.dSYM" | head -1)
 echo "DWARF_DSYM_FILE_NAME:- ${DWARF_DSYM_FILE_NAME}"
 
 echo "CI_PRODUCT:- ${CI_PRODUCT}"
