@@ -10,6 +10,7 @@ ls ${DWARF_DSYM_FOLDER_PATH}
 #DWARF_DSYM_FILE_NAME="SPMDemo.app.dSYM"
 #DWARF_DSYM_FILE_NAME=$(ls "${DWARF_DSYM_FOLDER_PATH}" | head -1)
 echo "Before Find"
+echo "PWD:- ${PWD}"
 
 find "$DWARF_DSYM_FOLDER_PATH"  -type f -name "${CI_PRODUCT}*.dSYM"
 DWARF_DSYM_FILE_NAME=$(find "${DWARF_DSYM_FOLDER_PATH}"  -type f -name "${CI_PRODUCT}*.dSYM" | head -1)
