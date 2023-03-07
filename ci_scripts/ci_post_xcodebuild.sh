@@ -7,9 +7,9 @@
 # SKIP_SIMULATOR_BUILDS=1
   SCRIPT_SRC=$(find "$CI_DERIVED_DATA_PATH" -name 'Instabug_dsym_upload.sh' | head -1)
   DWARF_DSYM_FOLDER_PATH="$CI_ARCHIVE_PATH/dSYMs"
-
-  DWARF_DSYM_FILE_NAME=$(ls "${DWARF_DSYM_FOLDER_PATH}" | head -2)
-
+echo "DWARF_DSYM_FOLDER_PATH:- ${DWARF_DSYM_FOLDER_PATH}"
+  DWARF_DSYM_FILE_NAME=$(ls "${DWARF_DSYM_FOLDER_PATH}" | head -1)
+echo "DWARF_DSYM_FILE_NAME:- ${DWARF_DSYM_FILE_NAME}"
   if [ ! "${SCRIPT_SRC}" ]; then
     echo "Instabug: err: script not found. Make sure that you're including InstabugResources.bundle in your project directory"
     exit 1
