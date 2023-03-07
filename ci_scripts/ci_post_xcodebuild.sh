@@ -12,8 +12,10 @@ ls ${DWARF_DSYM_FOLDER_PATH}
 echo "Before Find"
 echo "PWD:- ${PWD}"
 
-find "${DWARF_DSYM_FOLDER_PATH}" -name "${CI_PRODUCT}*.dSYM"
-DWARF_DSYM_FILE_NAME=$(find "${DWARF_DSYM_FOLDER_PATH}" -name "${CI_PRODUCT}*.dSYM" | head -1)
+#DWARF_DSYM_FILE_NAME=$(find "${DWARF_DSYM_FOLDER_PATH}" -name "${CI_PRODUCT}*.dSYM" | head -1)
+
+DWARF_DSYM_FILE_NAME="${CI_PRODUCT}.app.dSYM"
+
 echo "DWARF_DSYM_FILE_NAME:- ${DWARF_DSYM_FILE_NAME}"
 
 echo "CI_PRODUCT:- ${CI_PRODUCT}"
