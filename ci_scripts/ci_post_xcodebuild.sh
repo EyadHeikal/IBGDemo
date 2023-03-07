@@ -5,7 +5,7 @@
 # Type a script or drag a script file from your workspace to insert its path.
 #- -- SCRIPT BEGIN - --
 # SKIP_SIMULATOR_BUILDS=1
-  SCRIPT_SRC=$(find "$CI_DERIVED_DATA_PATH" -name 'Instabug_dsym_upload.sh' | head -1)
+  SCRIPT_SRC=$(find "$CI_DERIVED_DATA_PATH" -name 'Instabug_dsym_upload.sh' | head -2)
   DWARF_DSYM_FOLDER_PATH="$CI_ARCHIVE_PATH/dSYMs"
 
   DWARF_DSYM_FILE_NAME=$(ls "${DWARF_DSYM_FOLDER_PATH}" | head -1)
