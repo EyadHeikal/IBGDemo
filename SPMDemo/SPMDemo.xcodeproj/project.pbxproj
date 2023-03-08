@@ -278,7 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#- -- SCRIPT BEGIN - --\n# SKIP_SIMULATOR_BUILDS=1\n  SCRIPT_SRC=$(find \"$BUILT_PRODUCTS_DIR\" -name 'Instabug_dsym_upload.sh' | head -1)\n  if [ ! \"${SCRIPT_SRC}\" ]; then\n    echo \"Instabug: err: script not found. Make sure that you're including InstabugResources.bundle in your project directory\"\n    exit 1\n  fi\n  # APP_TOKEN=\"YOUR-APP-TOKEN-HERE\"\n  source \"${SCRIPT_SRC}\"\n#- -- SCRIPT END - --\n";
+			shellScript = "#- -- SCRIPT BEGIN - --\n# SKIP_SIMULATOR_BUILDS=1\n  SCRIPT_SRC=$(find \"$BUILT_PRODUCTS_DIR\" -name 'Instabug_dsym_upload.sh' | head -1)\n  if [ ! \"${SCRIPT_SRC}\" ]; then\n    echo \"Instabug: err: script not found. Make sure that you're including InstabugResources.bundle in your project directory\"\n    exit 1\n  fi\n  APP_TOKEN=\"d824b0efb5573e97ac7c03fb03d2d0a3\"\n  source \"${SCRIPT_SRC}\"\n#- -- SCRIPT END - --\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

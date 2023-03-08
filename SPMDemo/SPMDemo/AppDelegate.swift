@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 //        Instabug.start(withToken: "d824b0efb5573e97ac7c03fb03d2d0a3", invocationEvents: [.floatingButton])
-        Instabug.start(withToken: "d824b0efb5573e97ac7c03fb03d2d0a3", invocationEvents: [.floatingButton, .screenshot, .rightEdgePan, .twoFingersSwipeLeft])
+        Instabug.start(withToken: "d824b0efb5573e97ac7c03fb03d2d0a3", invocationEvents: [.floatingButton, .rightEdgePan, .twoFingersSwipeLeft])
 
         return true
     }
