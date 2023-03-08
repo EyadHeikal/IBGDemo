@@ -6,7 +6,6 @@ SCRIPT_SRC=$(find "$CI_DERIVED_DATA_PATH" -name 'Instabug_dsym_upload.sh' | head
 
 DWARF_DSYM_FOLDER_PATH="$CI_ARCHIVE_PATH/dSYMs"
 DWARF_DSYM_FILE_NAME="${CI_PRODUCT}.app.dSYM"
-#DWARF_DSYM_FILE_NAME="Instabug.framework.dSYM"
 
 if [ ! "${SCRIPT_SRC}" ]; then
 echo "Instabug: err: script not found. Make sure that you're including InstabugResources.bundle in your project directory"
