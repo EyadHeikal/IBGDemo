@@ -136,10 +136,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8640A69929B4C99400A660C5 /* Build configuration list for PBXNativeTarget "SPMDemo" */;
 			buildPhases = (
-				86FC5FC429B87FF400765F49 /* ShellScript */,
 				8640A66B29B4C99300A660C5 /* Sources */,
 				8640A66C29B4C99300A660C5 /* Frameworks */,
 				8640A66D29B4C99300A660C5 /* Resources */,
+				86FC5FC429B87FF400765F49 /* ShellScript */,
 			);
 			buildRules = (
 			);
