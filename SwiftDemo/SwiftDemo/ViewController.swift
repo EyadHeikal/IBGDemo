@@ -13,13 +13,7 @@ class PlayerViewController: AVPlayerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        playVideo()
-
-        let request = URLRequest(url: URL(string: "https://dashboard.instabug.com/applications/iosteam-uitests/beta/network")!)
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            print(data, response, error)
-        }
-        .resume()
+        playVideo()
     }
 
     private func playVideo() {
@@ -41,7 +35,8 @@ class PlayerViewController: AVPlayerViewController {
         player?.pause()
         player = nil
     }
-    
+
+
 }
 
 class ViewController: UIViewController, AVPlayerViewControllerDelegate {
@@ -51,11 +46,37 @@ class ViewController: UIViewController, AVPlayerViewControllerDelegate {
 //        UserDefaults.standard.set("IBGValue", forKey: "IBGKey")
 //        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(playVideo)))
 
-        let request = URLRequest(url: URL(string: "https://dashboard.instabug.com/applications/iosteam-uitests/beta/network")!)
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        var request = URLRequest(url: URL(string: "https://httpbin.org/post")!)
+        request.httpBodyStream = createInputStream()
+        request.httpMethod = "POST"
+//        let task = URLSession.shared.uploadTask(withStreamedRequest: request)
+//        task.delegate = self
+//        task.resume()
+        URLSession.shared.uploadTask(with: request, from: getLargeData()) { data, response, error in
             print(data, response, error)
         }
         .resume()
+    }
+
+
+    func createInputStream() -> InputStream {
+        let url = FileManager.default.temporaryDirectory
+            .appending(components: "TempFile")
+
+        let outputStream = OutputStream(url: url, append: false)!
+        outputStream.open()
+        let dict: [String: [String]] = ["Hello": .init(repeating: "World", count: 1_0)]
+
+        JSONSerialization.writeJSONObject(dict, to: outputStream, error: .none)
+        outputStream.close()
+        return InputStream(url: url)!
+    }
+
+
+    func getLargeData() -> Data {
+        let dict: [String: [String]] = ["Hello": .init(repeating: "World", count: 10)]
+
+        return try! JSONSerialization.data(withJSONObject: dict)
     }
     
     @objc func playVideo() {
@@ -72,4 +93,11 @@ class ViewController: UIViewController, AVPlayerViewControllerDelegate {
         }
     }
 
+}
+
+
+extension ViewController: URLSessionTaskDelegate {
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+
+    }
 }

@@ -1,16 +1,34 @@
 PODS:
-  - Instabug (11.6.0)
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - Instabug (11.9.1)
 
 DEPENDENCIES:
-  - Instabug
+  - AFNetworking
+  - Instabug (= 11.9.1)
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
     - Instabug
 
 SPEC CHECKSUMS:
-  Instabug: bddae5b34c359e97e4aee5ce4d9a71fdba4df652
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  Instabug: 0fc6e8c62d153208d854bf20cf088052346f34fc
 
-PODFILE CHECKSUM: 05ca32290bf9fa44d2097bfdcdee102817cfe478
+PODFILE CHECKSUM: 4efee2ad3b18c694ba3fb84293a4fb83547dee7a
 
 COCOAPODS: 1.11.3

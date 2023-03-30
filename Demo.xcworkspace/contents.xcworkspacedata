@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:XCFrameworkDemo/XCFrameworkDemo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SPMDemo/SPMDemo.xcodeproj">
    </FileRef>
    <FileRef

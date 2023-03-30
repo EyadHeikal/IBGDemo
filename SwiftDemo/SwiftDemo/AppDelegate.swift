@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Instabug.start(withToken: "d824b0efb5573e97ac7c03fb03d2d0a3", invocationEvents: [.shake, .screenshot, .floatingButton])
+        Instabug.sdkDebugLogsLevel = .verbose
+        NetworkLogger.setRequestObfuscationHandler { request in
+            var request = request
+            request.httpBody = Data()
+            return request
+        }
         return true
     }
 

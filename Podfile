@@ -5,8 +5,10 @@ use_frameworks!
 def common_pods
 #  pod 'Instabug', :podspec => 'https://ios-releases.instabug.com/custom/save_features_on_background/Instabug.podspec'
 #  pod 'Instabug', :podspec => 'https://ios-releases.instabug.com/custom/gojek/11.4.1/Instabug.podspec'
-#    pod 'Instabug', :podspec => 'https://ios-releases.instabug.com/custom/customBuild-test/11.4.1/Instabug.podspec'
-  pod 'Instabug'
+#  pod 'Instabug', :podspec => 'https://ios-releases.instabug.com/custom/customBuild-test/11.4.1/Instabug.podspec'
+  pod 'Instabug', '11.9.1'
+  pod 'AFNetworking'
+
 end
 
 target 'Demo' do

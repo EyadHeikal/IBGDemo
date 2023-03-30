@@ -5,7 +5,7 @@
 
  Copyright:  (c) 2013-2020 by Instabug, Inc., all rights reserved.
 
- Version:    11.6.0
+ Version:    11.9.1
  */
 
 #import <Foundation/Foundation.h>
@@ -408,6 +408,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)userUUID:(void (^)(NSString * _Nullable uuid))userUUIDCompletionHandler;
 
+/**
+ @brief Sets whether data stored in user defaults should be encrypted or not..
+
+ @discussion Values stored in user defaults are encrypted by default. Set this property to false to override this behavior and store values as plaintext instead.
+ */
+@property (class, atomic, assign) BOOL userDefaultsEncryptionEnabled;
 
 #pragma mark - SDK Debugging
 
