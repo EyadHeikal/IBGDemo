@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Instabug.start(withToken: "d824b0efb5573e97ac7c03fb03d2d0a3", invocationEvents: [.floatingButton])
         Instabug.start(withToken: "d824b0efb5573e97ac7c03fb03d2d0a3", invocationEvents: [.floatingButton, .rightEdgePan, .twoFingersSwipeLeft])
         let array = ContiguousArray()
-        Instabug.sdkDebugLogsLevel =
+        
         return true
     }
 
