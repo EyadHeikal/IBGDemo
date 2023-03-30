@@ -612,8 +612,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:Instabug/Instabug-SP.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 11.9.0;
+				kind = exactVersion;
+				version = 11.9.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
